@@ -31,6 +31,7 @@ fn main() {
         f.read_to_string(&mut s).unwrap();
         breeds = serde_json::from_str(&s).unwrap();
     } else {
+        eprintln!("breeds.json not found, try to get from palworld.caimogu.cc, this may take few minutes...");
         let mut i = 1;
         loop {
             let re = c
